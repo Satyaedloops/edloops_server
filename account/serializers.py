@@ -4,18 +4,15 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth import authenticate
 
 class RegisterSerializer(serializers.Serializer):
-    first_name = serializers.CharField()
-    last_name = serializers.CharField()
     username = serializers.CharField()
     password = serializers.CharField()
 
     def validate(self, data):
-
         if User.objects.filter(username = data['username']).exists():
             return serializers.ValidationError('username is already taken')
         
         return data
-    
+
     
     def create(self, validated_data):
         user = User.objects.create(

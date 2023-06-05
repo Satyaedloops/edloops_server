@@ -6,7 +6,6 @@ from rest_framework import status
 
 class RegisterView(APIView):
 
-
     def post(self, request):
         try:
             data = request.data 

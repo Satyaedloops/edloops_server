@@ -95,7 +95,7 @@ WSGI_APPLICATION = 'bucket.wsgi.application'
 import dj_database_url
 
 DATABASES = {
-    'default': dj_database_url.parse(env('DATABASE_URL'))
+    'default': dj_database_url.parse(env('postgres://edloopsdb_user:ks0bitAfDTMg7xvTJ5eTeyW4CuyxJqcf@dpg-cj9vbvfnujnc73b7ppfg-a.oregon-postgres.render.com/edloopsdb'))
 }
 
 

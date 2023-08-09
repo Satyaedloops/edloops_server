@@ -13,4 +13,4 @@ class Article(models.Model):
             self.slug = slugify(self.title)
             # Add a random string to the slug
             self.slug += '-' + get_random_string(length=6)
-        super().save(*args, **kwargs)
+        super().save(*args, **kwargs) 
